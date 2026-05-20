@@ -15,11 +15,11 @@ Implemente as classes (`model`) e o mapeamento ORM conforme o diagrama de classe
 * `/clientes`: Operações CRUD (Create, Read, Update, Delete).
 
 **Verificação:**
-* Impeça emails ou telefones duplicados.
+* Impeça emails duplicados.
 
 **Tratamento de Exceções:**
 * Trate erros com mensagens apropriadas.
-* Retorne status HTTP apropriados para os erros.
+* Retorne status HTTP apropriados para os erros. 
 
 **Respostas:**
 * Padronize as respostas em formato JSON.
@@ -50,6 +50,14 @@ exception:
     "mensagem" : "Funcionário já cadastrado."
 }
 ```
+
+**DTO:**
+* Deve controlar os dados de saída da API.
+* Oculte os dados abaixo:
+    * `id`
+    * `cpf`
+    * `cnpj`
+    * `senha`
 
 **Testes:**
 * Teste os endpoints utilizando Insomnia.
