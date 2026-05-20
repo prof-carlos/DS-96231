@@ -34,6 +34,7 @@ Implemente as classes (`model`) e o mapeamento ORM conforme o diagrama de classe
     * `controller`
     * `exception`
     * `dto`
+    * `config`
 
 * Padronize as mensagens da API em JSON conforme abaixo: 
 
