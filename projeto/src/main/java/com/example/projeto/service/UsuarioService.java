@@ -5,6 +5,7 @@ import com.example.projeto.dto.UsuarioResponseDTO;
 import com.example.projeto.model.UsuarioModel;
 import com.example.projeto.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
