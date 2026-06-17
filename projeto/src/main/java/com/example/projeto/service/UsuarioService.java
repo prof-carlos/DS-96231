@@ -14,6 +14,9 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository repository;
 
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
+
     public List<UsuarioResponseDTO> listarTodos() {
         return repository
                 .findAll()
@@ -30,7 +33,7 @@ public class UsuarioService {
         UsuarioModel novoUsuario = new UsuarioModel();
         novoUsuario.setNome(usuarioDTO.getNome());
         novoUsuario.setEmail(usuarioDTO.getEmail());
-        novoUsuario.setSenha(usuarioDTO.getSenha());
+        novoUsuario.setSenha(passwordEncoder.encode(usuarioDTO.getSenha()));
         
         return repository.save(novoUsuario);
     }
